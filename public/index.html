@@ -20,11 +20,11 @@
   
   <!-- Main style sheet. Change version number in query string to force styles refresh -->
   <!-- Link element no longer needs type attribute -->
-  <link rel="stylesheet" href="css/screen.css?v=1.0">
+  <link rel="stylesheet" href="/stylesheets/screen.css?v=1.0">
   
   <!-- Modernizr for feature detection of CSS3 and HTML5; must be placed in the "head" -->
   <!-- Script tag no longer needs type attribute -->
-  <script src="js/modernizr-1.6.min.js"></script>
+  <script src="/javascripts/modernizr-1.6.min.js"></script>
   
   <!-- Remove the script reference below if you're using Modernizr -->
   <!--[if lt IE 9]>
@@ -100,7 +100,7 @@
     </nav>
     <nav id="pages">
       <ul>
-        <li><a href="#" class="current">Home</a></li>
+        <!-- <li><a href="#" class="current">Home</a></li> -->
         <li><a href="http://about.me/dannluciano">About</a></li>
         <li><a href="http://blog.dannluciano.com.br">Blog</a></li>
         <li><a href="mailto:dannluciano@gmail.com">Contact</a></li>
@@ -117,13 +117,17 @@
   
   <!-- The main footer has an ID for targeting, similar to the main header -->
   <footer id="f1">
-  <p>Copyleft &copy; Dann Luciano de Menezes 2011</p>
+    <p>
+      <a rel="license" href="http://creativecommons.org/licenses/by/3.0/">
+        <img alt="Licença Creative Commons" style="border-width:0" src="http://i.creativecommons.org/l/by/3.0/88x31.png" />
+      </a>
+    </p>
   </footer><!-- #f1 -->
 
 <!-- Remote jQuery with local fallback; taken from HTML5 Boilerplate http://html5boilerplate.com -->
 <!-- jQuery version might not be the latest; check jquery.com -->
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.4/jquery.min.js"></script>
-<script>!window.jQuery && document.write(unescape('%3Cscript src="js/jquery-1.4.4.min.js"%3E%3C/script%3E'))</script>
+<script>!window.jQuery && document.write(unescape('%3Cscript src="javascripts/jquery-1.4.4.min.js"%3E%3C/script%3E'))</script>
 
 <!-- Below is your script file, which has a basic JavaScript design pattern that you can optionally use -->
 <!-- Keep this and plugin scripts at the bottom for faster page load; combining and minifying scripts is recommended -->
