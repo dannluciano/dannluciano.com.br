@@ -1,3 +1,7 @@
+* Add support for i18n in javascript
 * Add all images in one image and update the css file for sprites!
 * Add Goggle Analytics properties
 * Add link for source of project on github
+* Fix the links beging www
+* Create a sinatra application
+* Create a post in the blog for explaning of project

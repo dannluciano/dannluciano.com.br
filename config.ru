@@ -1,4 +1,7 @@
-use Rack::Static, 
+require "rubygems"
+require "bundler/setup"
+
+use Rack::Static,
   :urls => ["/stylesheets", "/images", "/javascripts"],
   :root => "public"
 

@@ -143,3 +143,7 @@ h2  {
 #pages ul li .current {
   text-decoration:underline;
 }
+
+#languages ul li a {
+  padding: 0px 1px 0px 1px;
+}
