@@ -14,13 +14,14 @@
   
   <!-- Delete these two icon references once you've placed them in the root directory with these file names -->
   <!-- favicon 16x16 -->
-  <link rel="shortcut icon" href="./favicon.ico">
+  <link rel="shortcut icon" href="/favicon.ico">
   <!-- apple touch icon 57x57 -->
-  <link rel="apple-touch-icon" href="./favicon.png">
+  <link rel="apple-touch-icon" href="/favicon.png">
   
   <!-- Main style sheet. Change version number in query string to force styles refresh -->
   <!-- Link element no longer needs type attribute -->
   <link rel="stylesheet" href="/stylesheets/screen.css?v=1.0">
+  <link rel="stylesheet" href="/stylesheets/facebox.css">
   
   <!-- Modernizr for feature detection of CSS3 and HTML5; must be placed in the "head" -->
   <!-- Script tag no longer needs type attribute -->
@@ -101,7 +102,7 @@
     <nav id="pages">
       <ul>
         <!-- <li><a href="#" class="current">Home</a></li> -->
-        <li><a href="http://about.me/dannluciano"><span id="about">About</span></a></li>
+        <li><a href="#about_content" rel="facebox"><span id="about">About</span></a></li>
         <li><a href="http://blog.dannluciano.com.br"><span id="blog">Blog</span></a></li>
         <li><a href="mailto:dannluciano@gmail.com"><span id="contact">Contact</span></a></li>
       </ul>
@@ -119,8 +120,8 @@
   <footer>
     <nav id="languages">
       <ul>
-        <li><a id="pt-br" href="#"><img src="/images/pt-br.png"></a></li>
-        <li><a id="en" href="#"><img src="/images/en.png"></a></li>
+        <li id="pt-br"><img src="/images/pt-br.png"></li>
+        <li id="en"><img src="/images/en.png"></li>
       </ul>
     </nav>
     <p>
@@ -128,7 +129,27 @@
         <img alt="Creative Commons License" style="border-width:0" src="http://i.creativecommons.org/l/by/3.0/80x15.png" />
       </a>
     </p>
-  </footer><!-- #f1 -->
+  </footer>
+<div id="about_content">
+  <section id="description">
+    <h2>Sobre Dann Luciano</h2>
+    <div id="person_image">
+      <img src="/images/EU.jpg" width="255" height="255"/>
+    </div>
+    <p>
+      Possuo graduação em Ciência da Computação pelo Centro de Ensino Unificado de Teresina - CEUT (2006-2010) e atualmente faço pós-graduação em Sistemas e Computação pela Universidade Federal do Rio Grande do Norte - UFRN (2011-2013).
+    </p>
+    <p>
+      Tenho experiência em desenvolvimento web, tendo contribuido para o desenvolvimento de aplicações com alta complexidade e concorrência como o <strong><a href="http://bomdelance.com.br" target="_blank">Bom de Lance</a></strong>. Possuo um amor eterno por linguagens de programação, não importando muito qual seja ela. Atualmente gosto de programar mais em C, Ruby e Javascript. Defensor de boas praticas de programação e de metodologias ágeis, buscando sempre mater o Respeito entre processos e pessoas.
+    </p>
+    <p>
+      Apaixonado pela vida, família e pela Hayala Glenda. Adoro acampar e praticar esportes, sempre tentando manter uma vida saudável neste mundo de cabeça para baixo.
+    </p>
+    <p>
+      Caso esteja querendo algum serviço, tirar alguma duvida, entre em <strong><a href="mailto:dannluciano@gmail.com">contato</a></strong> agora mesmo ou me procure em umas das redes sociais listadas <strong><a href="#" onclick="$.facebox.close()">nesta pagina</a></strong>
+    </p>
+  </section>
+</div>
 
 <!-- Remote jQuery with local fallback; taken from HTML5 Boilerplate http://html5boilerplate.com -->
 <!-- jQuery version might not be the latest; check jquery.com -->
@@ -136,7 +157,9 @@
 <script>!window.jQuery && document.write(unescape('%3Cscript src="javascripts/jquery-1.4.4.min.js"%3E%3C/script%3E'))</script>
 
 <script src="/javascripts/i18n.js" type="text/javascript" charset="utf-8"></script>
-<script src="/javascripts/translate.js" type="text/javascript"></script>
+<script src="/javascripts/translate.js" type="text/javascript" charset="utf-8"></script>
+<script src="/javascripts/facebox.js" type="text/javascript" charset="utf-8"></script>
+<script src="/javascripts/application.js" type="text/javascript" charset="utf-8"></script>
 
 <!-- Below is your script file, which has a basic JavaScript design pattern that you can optionally use -->
 <!-- Keep this and plugin scripts at the bottom for faster page load; combining and minifying scripts is recommended -->
