@@ -4,7 +4,7 @@ I18n.locale = "pt-br";
 I18n.translations = {};
 
 I18n.translations.en = {
-  title: "I am Dann Luciano",
+  title: "Dann Luciano",
   subtitle: "\"A lifelong student of the art of programming computers!\"",
   about: "About",
   blog: "Blog",
@@ -12,7 +12,7 @@ I18n.translations.en = {
 };
 
 I18n.translations['pt-br'] = {
-    title: "Eu sou Dann Luciano",
+    title: "Dann Luciano",
     subtitle: "\"Um eterno estudante da arte de programar computadores!\"",
     about: "Sobre",
     blog: "Blog",
