@@ -156,6 +156,14 @@ h2  {
   text-decoration:underline;
 }
 
+#footer {
+  color: #555;
+}
+
+#footer a:hover {
+  color: #FFF;
+}
+
 #languages ul li {
   padding: 0px 1px 0px 1px;
   cursor: pointer;
@@ -172,7 +180,7 @@ h2  {
 }
 
 #about_content, a {
-  color:#CCC;
+  color:#000;
 }
 
 #about_content, strong {
