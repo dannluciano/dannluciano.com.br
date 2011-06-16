@@ -171,7 +171,10 @@
 <!-- asynchronous analytics code by Mathias Bynens; change UA-XXXXX-X to your own code; http://mathiasbynens.be/notes/async-analytics-snippet -->
 <!-- this can also be placed in the <head> if you want page views to be tracked quicker -->
 <script>
-var _gaq = [['_setAccount', 'UA-12953421-2'], ['_trackPageview']];
+   var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-12953421-3']);
+  _gaq.push(['_setDomainName', '.com.br']);
+  _gaq.push(['_trackPageview']);
 (function(d, t) {
 	var g = d.createElement(t),
 		s = d.getElementsByTagName(t)[0];
