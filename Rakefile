@@ -1,9 +1,6 @@
-require "rubygems"
-require "rake"
-
 task :default => [:deploy]
-
+desc "Task Deploy"
 task :deploy do
-  git push origin master
-  git push heroku
+  system "git push origin master"
+  system "git push heroku"
 end
