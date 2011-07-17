@@ -5,6 +5,6 @@ gem "rack"
 gem "shotgun"
 gem "i18n-js"
 
-configure :production do
-  require "newrelic_rpm"
+group :production do
+  gem "newrelic_rpm"
 end
