@@ -1,6 +1,7 @@
-task :default => [:deploy]
-desc "Task Deploy"
-task :deploy do
-  system "git push origin master"
-  system "git push heroku"
-end
+# Add your own tasks in files placed in lib/tasks ending in .rake,
+# for example lib/tasks/capistrano.rake, and they will automatically be available to Rake.
+
+require File.expand_path('../config/application', __FILE__)
+require 'rake'
+
+DannlucianoComBr::Application.load_tasks

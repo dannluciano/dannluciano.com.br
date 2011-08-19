@@ -1,151 +1,239 @@
-<!doctype html>
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Ruby on Rails: Welcome aboard</title>
+    <style type="text/css" media="screen">
+      body {
+        margin: 0;
+        margin-bottom: 25px;
+        padding: 0;
+        background-color: #f0f0f0;
+        font-family: "Lucida Grande", "Bitstream Vera Sans", "Verdana";
+        font-size: 13px;
+        color: #333;
+      }
 
-<!-- Paul Irish's technique for targeting IE, modified to only target IE6, applied to the html element instead of body -->
-<!--[if lt IE 7 ]><html lang="en" class="no-js ie6"><![endif]-->
-<!--[if (gt IE 6)|!(IE)]><!--><html lang="en" class="no-js"><!--<![endif]-->
+      h1 {
+        font-size: 28px;
+        color: #000;
+      }
 
-<head>
-  <meta charset="utf-8">
-  
-  <title>Dann Luciano de Menezes</title>
-  <meta name="description" content="Dann Luciano de Menezes Home Page">
-  <meta name="author" content="Dann Luciano de Menezes">
-  
-  <link rel="shortcut icon" href="/images/favicon.ico">
-  <link rel="apple-touch-icon" href="/images/favicon.png">
-  
-  <link rel="stylesheet" href="/stylesheets/screen.css?v=1.0">
-  <link rel="stylesheet" href="/stylesheets/facebox.css">
-  
-  <script src="/javascripts/modernizr-1.6.min.js"></script>
-</head>
-<body class="home">
-  <section id="main">
-    <header>
-      <hgroup>
-        <h1 id="title"></h1>
-        <h2 id="subtitle"></h2>
-      </hgroup>
-    </header>
-    <nav id="social">
-      <ul>
-        <li>
-          <a href="http://delicious.com/dannluciano" title="Delicious">
-            <img src="/images/delicious.png" alt="Delicious" />
-          </a>
-        </li>
-        <li>
-          <a href="http://facebook.com/profile.php?id=1101154431" title="Facebook">
-            <img src="/images/facebook.png" alt="Facebook" />
-          </a>
-        </li>
-        <li>
-          <a href="http://github.com/dannluciano" title="GitHub">
-            <img src="/images/github.png" alt="GitHub" />
-          </a>
-        </li>
-        <li>
-          <a href="http://profiles.google.com/dannluciano/about" title="Google">
-            <img src="/images/google.png" alt="Google" />
-          </a>
-        </li>
-        <li>
-          <a href="http://profiles.google.com/dannluciano/about" title="Google Talk">
-            <img src="/images/google-talk.png" alt="Google Talk" />
-          </a>
-        </li>
-        <li>
-          <a href="http://br.linkedin.com/pub/dann-luciano-menezes/a/147/642" title="LinkedIn">
-            <img src="/images/linkedin.png" alt="LinkedIn" />
-          </a>
-        </li>
-        <li>
-          <a href="http://slideshare.net/dannluciano" title="Slideshare">
-            <img src="/images/slideshare.png" alt="Slideshare" />
-          </a>
-        </li>
-        <li>
-          <a href="http://dannluciano.tumblr.com" title="Tumblr">
-            <img src="/images/tumblr.png" alt="Tumblr" />
-          </a>
-        </li>
-        <li>
-          <a href="http://twitter.com/#!dannluciano" title="Twitter">
-            <img src="/images/twitter.png" alt="Twitter" />
-          </a>
-        </li>
-      </ul>
-      <div class="clear">
+      a  {color: #03c}
+      a:hover {
+        background-color: #03c;
+        color: white;
+        text-decoration: none;
+      }
+
+
+      #page {
+        background-color: #f0f0f0;
+        width: 750px;
+        margin: 0;
+        margin-left: auto;
+        margin-right: auto;
+      }
+
+      #content {
+        float: left;
+        background-color: white;
+        border: 3px solid #aaa;
+        border-top: none;
+        padding: 25px;
+        width: 500px;
+      }
+
+      #sidebar {
+        float: right;
+        width: 175px;
+      }
+
+      #footer {
+        clear: both;
+      }
+
+
+      #header, #about, #getting-started {
+        padding-left: 75px;
+        padding-right: 30px;
+      }
+
+
+      #header {
+        background-image: url("images/rails.png");
+        background-repeat: no-repeat;
+        background-position: top left;
+        height: 64px;
+      }
+      #header h1, #header h2 {margin: 0}
+      #header h2 {
+        color: #888;
+        font-weight: normal;
+        font-size: 16px;
+      }
+
+
+      #about h3 {
+        margin: 0;
+        margin-bottom: 10px;
+        font-size: 14px;
+      }
+
+      #about-content {
+        background-color: #ffd;
+        border: 1px solid #fc0;
+        margin-left: -55px;
+        margin-right: -10px;
+      }
+      #about-content table {
+        margin-top: 10px;
+        margin-bottom: 10px;
+        font-size: 11px;
+        border-collapse: collapse;
+      }
+      #about-content td {
+        padding: 10px;
+        padding-top: 3px;
+        padding-bottom: 3px;
+      }
+      #about-content td.name  {color: #555}
+      #about-content td.value {color: #000}
+
+      #about-content ul {
+        padding: 0;
+        list-style-type: none;
+      }
+
+      #about-content.failure {
+        background-color: #fcc;
+        border: 1px solid #f00;
+      }
+      #about-content.failure p {
+        margin: 0;
+        padding: 10px;
+      }
+
+
+      #getting-started {
+        border-top: 1px solid #ccc;
+        margin-top: 25px;
+        padding-top: 15px;
+      }
+      #getting-started h1 {
+        margin: 0;
+        font-size: 20px;
+      }
+      #getting-started h2 {
+        margin: 0;
+        font-size: 14px;
+        font-weight: normal;
+        color: #333;
+        margin-bottom: 25px;
+      }
+      #getting-started ol {
+        margin-left: 0;
+        padding-left: 0;
+      }
+      #getting-started li {
+        font-size: 18px;
+        color: #888;
+        margin-bottom: 25px;
+      }
+      #getting-started li h2 {
+        margin: 0;
+        font-weight: normal;
+        font-size: 18px;
+        color: #333;
+      }
+      #getting-started li p {
+        color: #555;
+        font-size: 13px;
+      }
+
+
+      #sidebar ul {
+        margin-left: 0;
+        padding-left: 0;
+      }
+      #sidebar ul h3 {
+        margin-top: 25px;
+        font-size: 16px;
+        padding-bottom: 10px;
+        border-bottom: 1px solid #ccc;
+      }
+      #sidebar li {
+        list-style-type: none;
+      }
+      #sidebar ul.links li {
+        margin-bottom: 5px;
+      }
+
+    </style>
+    <script type="text/javascript">
+      function about() {
+        info = document.getElementById('about-content');
+        if (window.XMLHttpRequest)
+          { xhr = new XMLHttpRequest(); }
+        else
+          { xhr = new ActiveXObject("Microsoft.XMLHTTP"); }
+        xhr.open("GET","rails/info/properties",false);
+        xhr.send("");
+        info.innerHTML = xhr.responseText;
+        info.style.display = 'block'
+      }
+    </script>
+  </head>
+  <body>
+    <div id="page">
+      <div id="sidebar">
+        <ul id="sidebar-items">
+          <li>
+            <h3>Browse the documentation</h3>
+            <ul class="links">
+              <li><a href="http://api.rubyonrails.org/">Rails API</a></li>
+              <li><a href="http://stdlib.rubyonrails.org/">Ruby standard library</a></li>
+              <li><a href="http://corelib.rubyonrails.org/">Ruby core</a></li>
+              <li><a href="http://guides.rubyonrails.org/">Rails Guides</a></li>
+            </ul>
+          </li>
+        </ul>
       </div>
-    </nav>
-    <nav id="pages">
-      <ul>
-        <li><a href="#about_content" rel="facebox"><span id="about">About</span></a></li>
-        <li><a href="http://blog.dannluciano.com.br"><span id="blog">Blog</span></a></li>
-        <li><a href="mailto:dannluciano@gmail.com"><span id="contact">Contact</span></a></li>
-      </ul>
-      <div class="clear">
+
+      <div id="content">
+        <div id="header">
+          <h1>Welcome aboard</h1>
+          <h2>You&rsquo;re riding Ruby on Rails!</h2>
+        </div>
+
+        <div id="about">
+          <h3><a href="rails/info/properties" onclick="about(); return false">About your application&rsquo;s environment</a></h3>
+          <div id="about-content" style="display: none"></div>
+        </div>
+
+        <div id="getting-started">
+          <h1>Getting started</h1>
+          <h2>Here&rsquo;s how to get rolling:</h2>
+
+          <ol>
+            <li>
+              <h2>Use <code>rails generate</code> to create your models and controllers</h2>
+              <p>To see all available options, run it without parameters.</p>
+            </li>
+
+            <li>
+              <h2>Set up a default route and remove or rename this file</h2>
+              <p>Routes are set up in config/routes.rb.</p>
+            </li>
+
+            <li>
+              <h2>Create your database</h2>
+              <p>Run <code>rake db:migrate</code> to create your database. If you're not using SQLite (the default), edit <code>config/database.yml</code> with your username and password.</p>
+            </li>
+          </ol>
+        </div>
+      </div>
+
+      <div id="footer">&nbsp;</div>
     </div>
-  </section>
-  <footer id="footer">
-    <nav id="languages">
-      <ul>
-        <li id="pt-br"><img src="/images/pt-br.png"></li>
-        <li id="en"><img src="/images/en.png"></li>
-      </ul>
-    </nav>
-    <p>
-      <a href="http://github.com/dannluciano/dannluciano.com.br"><img src="/images/github_logo.png" /></a>
-    </p>
-  </footer>
-<div id="about_content">
-  <section id="description">
-    <h2>Dann Luciano</h2>
-    <div id="person_image">
-      <img src="/images/Eu.jpg" width="255" height="255"/>
-    </div>
-    <p>
-      Possuo graduação em Ciência da Computação pelo Centro de Ensino Unificado de Teresina - CEUT (2006-2010) e atualmente faço pós-graduação em Sistemas e Computação pela Universidade Federal do Rio Grande do Norte - UFRN (2011-2012).
-    </p>
-    <p>
-      Tenho experiência em desenvolvimento web, tendo contribuído para o desenvolvimento de aplicações com alta complexidade e concorrência como o <strong><a href="http://bomdelance.com.br" target="_blank">Bom de Lance</a></strong>. Apaixonado por linguagens de programação, não importando muito qual seja ela. Atualmente gosto de programar mais em C, Ruby e Javascript. Defensor de boas praticas de programação e de metodologias ágeis, buscando sempre manter o Respeito entre processos e pessoas.
-    </p>
-    <p>
-      Sinto um amor eterno pela vida, família, amigos e pela Hayala Glenda. Adoro acampar(apesar de nunca ter feito isso =p) e praticar esportes, sempre tentando manter uma vida saudável neste mundo de cabeça para baixo.
-    </p>
-    <p>
-      Caso esteja querendo algum serviço, tirar alguma duvida, entre em <strong><a href="mailto:dannluciano@gmail.com">contato</a></strong> agora mesmo ou me procure em umas das redes sociais listadas <strong><a href="#" onclick="$.facebox.close()">nesta pagina</a></strong>
-    </p>
-  </section>
-</div>
-
-<!-- Remote jQuery with local fallback; taken from HTML5 Boilerplate http://html5boilerplate.com -->
-<!-- jQuery version might not be the latest; check jquery.com -->
-<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.4/jquery.min.js"></script>
-<script>!window.jQuery && document.write(unescape('%3Cscript src="javascripts/jquery-1.4.4.min.js"%3E%3C/script%3E'))</script>
-
-<script src="/javascripts/i18n.js" type="text/javascript" charset="utf-8"></script>
-<script src="/javascripts/translate.js" type="text/javascript" charset="utf-8"></script>
-<script src="/javascripts/facebox.js" type="text/javascript" charset="utf-8"></script>
-<script src="/javascripts/application.js" type="text/javascript" charset="utf-8"></script>
-
-<!-- Below is your script file, which has a basic JavaScript design pattern that you can optionally use -->
-<!-- Keep this and plugin scripts at the bottom for faster page load; combining and minifying scripts is recommended -->
-<script src="javascripts/general.js" charset="utf-8"></script>
-<script type="text/javascript">
-
-  var _gaq = _gaq || [];
-  _gaq.push(['_setAccount', 'UA-12953421-3']);
-  _gaq.push(['_setDomainName', 'dannluciano.com.br']);
-  _gaq.push(['_setAllowHash', 'false']);
-  _gaq.push(['_trackPageview']);
-
-  (function() {
-    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-  })();
-
-</script>
-</body>
+  </body>
 </html>
