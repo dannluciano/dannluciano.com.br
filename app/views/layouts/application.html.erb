@@ -1,14 +1,41 @@
 <!DOCTYPE html>
-<html>
+<!-- Paul Irish's technique for targeting IE, modified to only target IE6, applied to the html element instead of body -->
+<!--[if lt IE 7 ]><html lang="en" class="no-js ie6"><![endif]-->
+<!--[if (gt IE 6)|!(IE)]><!-->
+<html lang="en" class="no-js"><!--<![endif]-->
 <head>
-  <title>DannlucianoComBr</title>
-  <%= stylesheet_link_tag :all %>
-  <%= javascript_include_tag :defaults %>
-  <%= csrf_meta_tag %>
+    <title>Dann Luciano de Menezes</title>
+    <meta charset="utf-8">
+
+    <meta name="description" content="Dann Luciano de Menezes Home Page">
+    <meta name="author" content="Dann Luciano de Menezes">
+
+    <link rel="shortcut icon" href="/images/favicon.ico">
+    <link rel="apple-touch-icon" href="/images/favicon.png">
+
+    <%= stylesheet_link_tag :all %>
+    <%= javascript_include_tag :defaults %>
+    <%= csrf_meta_tag %>
 </head>
 <body>
 
-<%= yield %>
+    <%= yield %>
+    
+    <script src="/javascripts/modernizr-1.6.min.js"></script>
+    <script type="text/javascript">
 
+      var _gaq = _gaq || [];
+      _gaq.push(['_setAccount', 'UA-12953421-3']);
+      _gaq.push(['_setDomainName', 'dannluciano.com.br']);
+      _gaq.push(['_setAllowHash', 'false']);
+      _gaq.push(['_trackPageview']);
+
+      (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+      })();
+
+    </script>
 </body>
 </html>

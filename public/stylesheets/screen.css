@@ -92,15 +92,6 @@ body {
 
 nav {
   margin: auto auto auto auto;
-/*  border: 1px solid #fff;*/
-}
-
-#social {
-  margin: 5% auto 5% auto;
-}
-
-#pages {
-  margin: 5% auto 5% auto;
 }
 
 nav ul {
@@ -117,6 +108,33 @@ nav ul li a {
 
 .clear {
   clear: both;
+}
+
+#social {
+  margin: 5% auto 5% auto;
+}
+
+#social ul {
+  width: 378px;
+}
+
+#social ul li {
+/*  display: inline;*/
+  float: left;
+  margin: 0px auto 0px auto;
+  padding: 0px 5px 0px 5px;
+}
+
+#social ul li div {
+
+}
+
+.wsa {
+  background-image : url("/images/sprites.png");
+}
+
+#pages {
+  margin: 5% auto 5% auto;
 }
 
 h1  {
