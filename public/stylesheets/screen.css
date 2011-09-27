@@ -125,8 +125,24 @@ nav ul li a {
   padding: 0px 5px 0px 5px;
 }
 
-#social ul li div {
+#footer {
+  width: 80%;
+  margin: 0px auto auto auto;
+  text-align: center;
+}
 
+#languages {
+  margin: 5% auto 5% auto;
+}
+
+#languages ul {
+  width: 42px;
+}
+
+#languages ul li {
+  float: left;
+  margin: 0px auto 0px auto;
+  padding: 0px 5px 0px 5px;
 }
 
 .wsa {
